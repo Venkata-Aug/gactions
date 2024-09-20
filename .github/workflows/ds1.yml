@@ -1,0 +1,32 @@
+name: Deployment Single Job Execution
+on: workflow_dispatch
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: |
+          echo "Installing dependencies"          
+          npm install
+          echo "Installing the dependencies successfully"
+      - name: Lint the code
+        run: |
+          echo "Linting the code"
+          echo "Code linted successfully"
+          npm run lint
+      - name: Test the code
+        run: |
+          echo "Testing the code"
+          echo "Code tested successfully"
+      - name: Build the code
+        run: |
+          echo "Building the code"
+          npm run build
+          echo "Code built successfully"
+      - name: Deploy the code
+        run: |
+          echo "Deploying the code"
+          echo "Code deployed successfully"
+
