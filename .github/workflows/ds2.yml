@@ -28,7 +28,7 @@ jobs:
           echo "Linting the code"
           echo "Code linted successfully"
           npm run lint
-        
+        working-directory: ./gactions       
 
   test:
     runs-on: ubuntu-latest
